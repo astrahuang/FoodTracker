@@ -24,6 +24,11 @@ class MealTableViewController: UITableViewController {
         
         // Load any saved meals, otherwise load sample data.
         if let savedMeals = loadMeals() {
+            // -----------Astra edited started-----------
+            if(savedMeals.count == 0) {
+                loadSampleMeals()
+            }
+            // ------------Astra edited ended------------
             meals += savedMeals
         }
         else {
